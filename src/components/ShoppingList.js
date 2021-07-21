@@ -20,8 +20,8 @@ function ShoppingList({ items, onItemFormSubmit }) {
   
   return (
     <div className="ShoppingList">
-      <ItemForm onItemFormSubmit={onItemFormSubmit} items={items}/>
-      <Filter onCategoryChange={handleCategoryChange} onSearchChange={handleSearchItem}/>
+      <ItemForm onItemFormSubmit={onItemFormSubmit} items={items} />
+      <Filter onCategoryChange={handleCategoryChange} onSearchChange={handleSearchItem} search={searchItems}/>
       <ul className="Items">
       {searchedItemsToDisplay.map((item) => (
       <Item key={item.id} name={item.name} category={item.category} />
